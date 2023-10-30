@@ -1,0 +1,39 @@
+import AcmeLogo from "@/app/ui/acme-logo"
+import styles from './ui/home.module.css'
+import Link from "next/link"
+export default function Page() {
+	return (
+		<main className='flex min-h-screen flex-col p-6'>
+			<div className={styles.shape}>
+				{/* <AcmeLogo /> */}
+			</div>
+			<div className={styles.shape}>
+				<div className={styles.shape}>
+					<div className={styles.shape} />
+					<p
+						className={`text-xl text-gray-800 md:text-3xl md:leading-normal`}
+					>
+						<strong>Welcome to Acme.</strong> This is the example
+						for the{" "}
+						<a
+							href='https://nextjs.org/learn/'
+							className='text-blue-500'
+						>
+							Next.js Learn Course
+						</a>
+						, brought to you by Vercel.
+					</p>
+					<Link
+						href='/login'
+						className='flex items-center gap-5 self-start rounded-lg bg-blue-500 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-blue-400 md:text-base'
+					>
+						<span>Log in</span>
+					</Link>
+				</div>
+				<div className={styles.shape}>
+					{/* Add Hero Images Here */}
+				</div>
+			</div>
+		</main>
+	)
+}
